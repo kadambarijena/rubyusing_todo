@@ -1,4 +1,18 @@
+<!-- todo form -->
+
+
 <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
-  <%= f.text_field :content, placeholder: "New Todo" %>
-  <%= f.submit %>
+
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+
+<div class="input-group my-3">
+  <%= f.text_field :content, placeholder: "New Todo", class: 'form-control' %>
+  <div class="input-group-append">
+	  <%= f.submit(nil, { class: 'input-group-text' }) %>
+  </div>
+
+</div>
 <% end %>

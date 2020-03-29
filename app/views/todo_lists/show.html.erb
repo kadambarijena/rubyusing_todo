@@ -1,17 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
+<h3>
+	Title:
+	<%= @todo_list.title %>
+</h3>
 
 <p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
+	<strong>Description:</strong>
+	<%= @todo_list.description %>
 </p>
 
 <div id="todo_items_wrapper">
-	<%= render @todo_list.todo_items %>
+	<!-- render all todo list items for this todo list -->
+	<ul class="list-group">
+		<%= render @todo_list.todo_items %>
+	</ul>
+
 	<div id="form">
 		<%= render "todo_items/form" %>
 	</div>
